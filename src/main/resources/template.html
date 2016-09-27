@@ -1,0 +1,98 @@
+<style>
+
+@import http://fonts.googleapis.com/css?family=PT+Sans;
+
+.message-xe4C03, .spacer-xe4C03 {
+	width: 100%;
+	text-align: center;
+	background: $backgroundColor;
+	color: $color;
+	text-align: center;
+	font-family: 'PT Sans', sans-serif; 
+	
+	/* set animation */
+	
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	z-index: 2147483647;
+}
+
+.message-xe4C03.large-xe4C03, .spacer-xe4C03.large-xe4C03 {
+	font-size: 72px;
+	line-height: 108px;
+	height: 108px;
+}
+
+.message-xe4C03.medium-xe4C03, .spacer-xe4C03.medium-xe4C03 {
+	font-size: 24px;
+	line-height: 48px;
+	height: 48px;
+}
+
+.message-xe4C03.small-xe4C03, .spacer-xe4C03.small-xe4C03 {
+	font-size: 12px;
+	line-height: 24px;
+	height: 24px;
+}
+
+.spacer-xe4C03 {
+	display: none;
+}
+
+/* Sticky */
+
+.message-xe4C03.sticky-xe4C03.large-xe4C03, .spacer-xe4C03.sticky-xe4C03.large-xe4C03 {
+	font-size: 24px;
+	line-height: 48px;
+	height: 48px;
+}
+
+.message-xe4C03.sticky-xe4C03.medium-xe4C03, .spacer-xe4C03.sticky-xe4C03.medium-xe4C03 {
+	font-size: 12px;
+	line-height: 24px;
+	height: 24px;
+}
+
+.message-xe4C03.sticky-xe4C03.small-xe4C03, .spacer-xe4C03.sticky-xe4C03.small-xe4C03 {
+	font-size: 8px;
+	line-height: 14px;
+	height: 14px;
+}
+
+.message-xe4C03.sticky-xe4C03 {
+	position: fixed;
+	top: 0;
+}
+
+.spacer-xe4C03.sticky-xe4C03 {
+	display: block;
+}
+</style>
+
+
+<header class="message-xe4C03 $size-xe4C03">
+	$message
+</header>
+
+<div class="spacer-xe4C03 $size-xe4C03"></div>
+
+<script>
+
+
+window.addEventListener('scroll', function(e) {
+
+	var className = 'sticky-xe4C03';
+	
+    var message = document.querySelector('.message-xe4C03');
+    var spacer = document.querySelector('.spacer-xe4C03');
+
+    if(window.scrollY > 1) {
+        message.classList.add(className);
+        spacer.classList.add(className);
+    } else {
+        message.classList.remove(className);
+        spacer.classList.remove(className);
+    }
+});
+
+</script>

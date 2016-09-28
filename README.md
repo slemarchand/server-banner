@@ -1,12 +1,18 @@
 # Server Banner
 
+This [Liferay](https://github.com/liferay/liferay-portal) plugin permanently display a configurable message on a sticky banner a top of the page.
+
 ## Installation
 
-Get the latest `.war` here and drop it in the `deploy` directory of your Liferay server. 
+Get the latest `.war` [here](https://github.com/slemarchand/server-banner/releases) and drop it in the `deploy` directory of your Liferay server. 
 
 ## Configuration
 
+Message, visual details and display restrictions rules for the banner are configurable, using portal properties.
+
 ### Portal properties
+
+The following portal properties define the behavior of the banner. In order to adapt the banner to your needs, you could override them (usualy in your `portal-ext.properties` file).
 
 ```
 ##

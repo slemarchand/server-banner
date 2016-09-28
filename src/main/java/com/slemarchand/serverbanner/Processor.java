@@ -16,6 +16,7 @@ import com.liferay.portal.security.permission.PermissionChecker;
 import com.liferay.portal.service.RoleLocalServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.slemarchand.serverbanner.model.Configuration;
+import com.slemarchand.serverbanner.util.HostNameUtil;
 import com.slemarchand.serverbanner.util.ResourceUtil;
 
 import java.util.HashMap;
@@ -72,6 +73,7 @@ public class Processor {
 		context.put("jvmRoute", getJvmRoute(request));
 		context.put("serverName", request.getServerName());
 		context.put("serverPort", request.getServerPort());
+		context.put("hostName", HostNameUtil.getHostName());
 
 		User user = themeDisplay.getUser();
 
